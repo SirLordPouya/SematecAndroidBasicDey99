@@ -1,13 +1,17 @@
 package com.pouyaheydari.learning.sematecandroidbasicdey99;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 
@@ -23,12 +27,16 @@ public class MainActivity extends AppCompatActivity {
         Button btnSave = findViewById(R.id.btnSave);
         ImageView imgProfile = findViewById(R.id.imgProfile);
         TextView txtHtml = findViewById(R.id.txtHtml);
+        EditText edtAge = findViewById(R.id.edtAge);
 
         txtTitle.setText("Pouya");
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Item saved!", Toast.LENGTH_LONG).show();
+                String age = edtAge.getText().toString();
+                Intent intent = new Intent(MainActivity.this, TestExplicitIntentActivity.class);
+                intent.putExtra("age", age);
+                startActivityForResult(intent, 256);
             }
         });
 
@@ -64,5 +72,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.d("Lifecycle", "onDestroy");
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 256) {
+            if (resultCode == Activity.RESULT_OK) {
+                String name = data.getStringExtra("name");
+                Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
+            }
+        }
+
     }
 }
