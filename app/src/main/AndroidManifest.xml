@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:allowBackup="true"
@@ -12,16 +13,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SematecAndroidBasicDey99">
-        <activity android:name=".TestHandlerActivity">
+        <activity android:name=".TestBroadcastReceiverActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TestPermissionActivity">
+        <activity android:name=".TestServiceActivity">
         </activity>
-        <activity android:name=".TestKebabMenuActivity"></activity>
+        <activity android:name=".TestRecyclerViewActivity" />
+        <activity android:name=".TestHandlerActivity" />
+        <activity android:name=".TestPermissionActivity" />
+        <activity android:name=".TestKebabMenuActivity" />
         <activity android:name=".TestNotificationActivity" />
         <activity android:name=".TestSharedPreferencesActivity" />
         <activity
@@ -35,6 +39,8 @@
         <activity android:name=".TestDrawerLayoutActivity" />
         <activity android:name=".TestWebViewActivity" />
         <activity android:name=".MainActivity" />
+
+        <service android:name=".TestService" />
     </application>
 
 </manifest>
