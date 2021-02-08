@@ -13,15 +13,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SematecAndroidBasicDey99">
-        <activity android:name=".TestBroadcastReceiverActivity">
+        <activity android:name=".TestPicassoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TestServiceActivity">
+        <activity android:name=".TestAsyncHttpClientActivity">
         </activity>
+        <activity android:name=".TestHttpUrlConnectionActivity"></activity>
+        <activity android:name=".TestThreadActivity" />
+        <activity android:name=".TestBroadcastReceiverActivity" />
+        <activity android:name=".TestServiceActivity" />
         <activity android:name=".TestRecyclerViewActivity" />
         <activity android:name=".TestHandlerActivity" />
         <activity android:name=".TestPermissionActivity" />
