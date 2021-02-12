@@ -2,4 +2,6 @@
     <string name="app_name">SematecAndroidBasicDey99</string>
     <string name="please_enter_your_age">Please enter your age</string>
     <string name="save">Save</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

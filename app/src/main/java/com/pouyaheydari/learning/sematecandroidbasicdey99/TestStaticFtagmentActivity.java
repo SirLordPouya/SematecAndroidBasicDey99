@@ -1,0 +1,14 @@
+package com.pouyaheydari.learning.sematecandroidbasicdey99;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+public class TestStaticFtagmentActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_test_static_ftagment);
+    }
+}
